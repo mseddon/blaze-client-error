@@ -1,0 +1,26 @@
+# Blaze Client 0.17-X POST issue
+### Tested under Windows 10 Creators Edition
+```
+[error] (run-main-0) java.io.IOException: Failed to connect to endpoint: RequestKey(https,duckduckgo.com)
+java.io.IOException: Failed to connect to endpoint: RequestKey(https,duckduckgo.com)
+        at org.http4s.client.blaze.BlazeClient$.$anonfun$apply$5(BlazeClient.scala:47)
+        at fs2.Task.$anonfun$flatMap$2(Task.scala:40)
+        at fs2.util.Attempt$.apply(Attempt.scala:12)
+        at fs2.Task.$anonfun$flatMap$1(Task.scala:40)
+        at scala.Function1.$anonfun$andThen$1(Function1.scala:52)
+        at fs2.internal.Future.$anonfun$flatMap$1(Future.scala:17)
+        at fs2.internal.Future.step(Future.scala:53)
+        at fs2.internal.Future.listen(Future.scala:30)
+        at fs2.internal.Future.$anonfun$listen$3(Future.scala:34)
+        at fs2.internal.Future.$anonfun$listen$3$adapted(Future.scala:34)
+        at fs2.internal.Trampoline.$anonfun$map$1(Trampoline.scala:10)
+        at fs2.internal.Trampoline$.run(Trampoline.scala:31)
+        at fs2.internal.Trampoline.run(Trampoline.scala:12)
+        at fs2.internal.Trampoline.run$(Trampoline.scala:12)
+        at fs2.internal.Trampoline$FlatMap.run(Trampoline.scala:18)
+        at fs2.Task$.$anonfun$async$4(Task.scala:247)
+        at fs2.Strategy$$anon$5$$anon$6.run(Strategy.scala:60)
+        at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+        at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+        at java.lang.Thread.run(Thread.java:745)
+```
